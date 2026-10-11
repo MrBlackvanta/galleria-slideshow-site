@@ -5,19 +5,94 @@
 @source not "../test";
 
 @theme {
-  --font-sans: var(--font-libre-baskerville), ui-serif, Georgia, serif;
+  --font-serif: var(--font-libre-baskerville), ui-serif, Georgia, serif;
+
+  --color-page: #ffffff;
+  --color-ink: #000000;
+  --color-muted: #767676;
+  --color-rule: #e5e5e5;
+  --color-wash: #f3f3f3;
+
+  --container-shell: 85rem;
+
+  --text-h1: 1.5rem;
+  --text-h1--line-height: 1.8125rem;
+  --text-h1--font-weight: 700;
+  --text-h1-md: 3.5rem;
+  --text-h1-md--line-height: 4rem;
+  --text-h1-md--font-weight: 700;
+
+  --text-h2: 1.5rem;
+  --text-h2--line-height: 1.875rem;
+  --text-h2--font-weight: 700;
+
+  --text-h3: 0.875rem;
+  --text-h3--line-height: 1.0625rem;
+  --text-h3--font-weight: 700;
+  --text-h3-md: 1.125rem;
+  --text-h3-md--line-height: 1.375rem;
+  --text-h3-md--font-weight: 700;
+
+  --text-year: 6.25rem;
+  --text-year--line-height: 6.25rem;
+  --text-year--font-weight: 700;
+  --text-year-md: 12.5rem;
+  --text-year-md--line-height: 9.375rem;
+  --text-year-md--font-weight: 700;
+
+  --text-byline: 0.9375rem;
+  --text-byline--line-height: 1.1875rem;
+  --text-byline--font-weight: 400;
+
+  --text-caption: 0.625rem;
+  --text-caption--line-height: 0.75rem;
+  --text-caption--font-weight: 400;
+  --text-caption-md: 0.8125rem;
+  --text-caption-md--line-height: 1rem;
+  --text-caption-md--font-weight: 400;
+
+  --text-body: 0.875rem;
+  --text-body--line-height: 1.75rem;
+  --text-body--font-weight: 700;
+
+  --text-action: 0.5625rem;
+  --text-action--line-height: 0.6875rem;
+  --text-action--letter-spacing: 0.2143em;
+  --text-action--font-weight: 700;
+  --text-action-md: 0.75rem;
+  --text-action-md--line-height: 0.9375rem;
+  --text-action-md--letter-spacing: 0.2143em;
+  --text-action-md--font-weight: 700;
+
+  --text-overlay: 0.625rem;
+  --text-overlay--line-height: 0.75rem;
+  --text-overlay--letter-spacing: 0.2143em;
+  --text-overlay--font-weight: 700;
+
+  --text-close: 0.875rem;
+  --text-close--line-height: 1.0625rem;
+  --text-close--letter-spacing: 0.2143em;
+  --text-close--font-weight: 700;
 }
 
 @layer base {
+  :root {
+    color-scheme: light;
+  }
+
   html {
     overflow-y: scroll;
   }
 
   body {
-    @apply font-sans;
+    @apply bg-page text-ink font-serif;
   }
 
   button:not(:disabled) {
     @apply cursor-pointer;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-current;
   }
 }
