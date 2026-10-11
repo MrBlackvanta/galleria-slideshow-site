@@ -13,7 +13,7 @@
   --color-rule: #e5e5e5;
   --color-wash: #f3f3f3;
 
-  --container-shell: 85rem;
+  --container-shell: 90rem;
 
   --text-h1: 1.5rem;
   --text-h1--line-height: 1.8125rem;
@@ -73,6 +73,12 @@
   --text-close--line-height: 1.0625rem;
   --text-close--letter-spacing: 0.2143em;
   --text-close--font-weight: 700;
+}
+
+@utility v-watermark {
+  &::before {
+    content: attr(data-watermark);
+  }
 }
 
 @layer base {
