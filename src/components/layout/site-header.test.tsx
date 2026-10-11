@@ -6,7 +6,7 @@ describe("SiteHeader", () => {
   it("takes the visitor home from the wordmark", () => {
     render(
       <SiteHeader>
-        <a href="/starry-night">Start slideshow</a>
+        <button type="button">Start slideshow</button>
       </SiteHeader>,
     );
 
@@ -20,12 +20,12 @@ describe("SiteHeader", () => {
   it("renders whatever the route puts beside the wordmark", () => {
     render(
       <SiteHeader>
-        <a href="/starry-night">Start slideshow</a>
+        <button type="button">Start slideshow</button>
       </SiteHeader>,
     );
 
     expect(
-      screen.getByRole("link", { name: "Start slideshow" }),
-    ).toHaveAttribute("href", "/starry-night");
+      screen.getByRole("button", { name: "Start slideshow" }),
+    ).toBeInTheDocument();
   });
 });

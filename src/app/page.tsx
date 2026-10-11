@@ -17,7 +17,7 @@ export default function Home() {
           Start slideshow
         </Link>
       </SiteHeader>
-      <main className="max-w-shell mx-auto px-6 pt-6 pb-12 md:px-10 md:pt-10 md:pb-16">
+      <main className="max-w-shell mx-auto w-full grow px-6 pt-6 pb-12 md:px-10 md:pt-10 md:pb-16">
         <h1 className="sr-only">galleria</h1>
         <PaintingGrid />
       </main>

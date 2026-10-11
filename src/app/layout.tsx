@@ -38,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${libreBaskerville.variable} antialiased`}>
-      <body className="relative">
+      <body className="relative flex min-h-dvh flex-col">
         {children}
         <Signature />
       </body>

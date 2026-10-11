@@ -5,6 +5,8 @@
 @source not "../test";
 
 @theme {
+  --breakpoint-wide: 88.5rem;
+
   --font-serif: var(--font-libre-baskerville), ui-serif, Georgia, serif;
 
   --color-page: #ffffff;
