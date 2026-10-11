@@ -75,6 +75,31 @@
   --text-close--font-weight: 700;
 }
 
+@utility v-caption {
+  --caption-ramp: calc(var(--spacing) * 14);
+  min-height: calc(var(--spacing) * 42.5);
+  padding-top: var(--caption-ramp);
+  background-image: linear-gradient(
+    to bottom in srgb,
+    --alpha(var(--color-ink) / 0%),
+    --alpha(var(--color-ink) / 50%) var(--caption-ramp),
+    --alpha(var(--color-ink) / 85%)
+  );
+}
+
+@utility v-masonry {
+  grid-column: var(--column-two);
+  grid-row: span var(--row-span);
+
+  @variant lg {
+    grid-column: var(--column-three);
+  }
+
+  @variant xl {
+    grid-column: var(--column-four);
+  }
+}
+
 @utility v-watermark {
   &::before {
     content: attr(data-watermark);
