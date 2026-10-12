@@ -4,8 +4,8 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import {
   endSlideshow,
-  isSlideshowRunning,
   startSlideshow,
+  useSlideshowRunning,
 } from "./slideshow-session";
 
 const SLIDE_DURATION = 6000;
@@ -13,14 +13,17 @@ const HEARTBEAT = 250;
 
 export default function SlideshowRunner({ nextSlug }: { nextSlug?: string }) {
   const router = useRouter();
+  const running = useSlideshowRunning();
 
   useEffect(() => {
-    if (new URLSearchParams(window.location.search).has("slideshow")) {
-      startSlideshow();
-      window.history.replaceState(null, "", window.location.pathname);
-    }
+    if (!new URLSearchParams(window.location.search).has("slideshow")) return;
 
-    if (!isSlideshowRunning()) return;
+    startSlideshow();
+    window.history.replaceState(null, "", window.location.pathname);
+  }, []);
+
+  useEffect(() => {
+    if (!running) return;
 
     if (!nextSlug) {
       endSlideshow();
@@ -39,7 +42,7 @@ export default function SlideshowRunner({ nextSlug }: { nextSlug?: string }) {
     }, HEARTBEAT);
 
     return () => clearInterval(timer);
-  }, [nextSlug, router]);
+  }, [running, nextSlug, router]);
 
   return null;
 }

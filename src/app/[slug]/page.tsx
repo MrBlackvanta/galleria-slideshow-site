@@ -1,5 +1,5 @@
 import { SiteHeader } from "@/components/layout";
-import { SlideshowRunner } from "@/components/slideshow";
+import { SlideshowRunner, SlideshowToggle } from "@/components/slideshow";
 import { openGraphBase, paintings } from "@/data";
 import {
   PaintingFigure,
@@ -8,7 +8,6 @@ import {
   PaintingStory,
 } from "@/views/painting";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export const dynamicParams = false;
@@ -54,12 +53,7 @@ export default async function PaintingPage({ params }: PaintingPageProps) {
   return (
     <>
       <SiteHeader>
-        <Link
-          href="/"
-          className="text-action md:text-action-md text-muted hover:text-ink uppercase transition-colors"
-        >
-          Stop slideshow
-        </Link>
+        <SlideshowToggle />
       </SiteHeader>
       <main className="max-w-shell wide:pt-25 mx-auto w-full grow px-6 pt-6 pb-16 md:px-10 md:pt-10 md:pb-14">
         <article className="wide:max-w-none wide:gap-x-102.5 wide:pb-16 relative md:mx-auto md:grid md:max-w-214 md:grid-cols-[475px_1fr] md:gap-y-16">

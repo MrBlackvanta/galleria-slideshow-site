@@ -1,13 +1,42 @@
-const KEY = "galleria.slideshow";
+import { useSyncExternalStore } from "react";
 
-export function startSlideshow() {
-  sessionStorage.setItem(KEY, "running");
+const KEY = "galleria.slideshow";
+const listeners = new Set<() => void>();
+
+function subscribe(listener: () => void) {
+  listeners.add(listener);
+
+  return () => {
+    listeners.delete(listener);
+  };
 }
 
-export function endSlideshow() {
-  sessionStorage.removeItem(KEY);
+function notify() {
+  for (const listener of listeners) listener();
+}
+
+function serverSnapshot() {
+  return false;
 }
 
 export function isSlideshowRunning() {
   return sessionStorage.getItem(KEY) !== null;
+}
+
+export function useSlideshowRunning() {
+  return useSyncExternalStore(subscribe, isSlideshowRunning, serverSnapshot);
+}
+
+export function startSlideshow() {
+  if (isSlideshowRunning()) return;
+
+  sessionStorage.setItem(KEY, "running");
+  notify();
+}
+
+export function endSlideshow() {
+  if (!isSlideshowRunning()) return;
+
+  sessionStorage.removeItem(KEY);
+  notify();
 }

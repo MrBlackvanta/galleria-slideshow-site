@@ -1,4 +1,4 @@
-# Galleria slideshow site
+# galleria
 
 My solution to the [Galleria slideshow site](https://www.frontendmentor.io/challenges/galleria-slideshow-site-tEA4pwsa6) challenge on Frontend Mentor.
 
