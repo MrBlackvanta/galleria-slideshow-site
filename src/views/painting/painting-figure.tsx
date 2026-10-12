@@ -1,10 +1,11 @@
 import type { Painting } from "@/data";
+import PaintingLightbox from "./painting-lightbox";
 
 export default function PaintingFigure({ painting }: { painting: Painting }) {
-  const { name, heroSmall, heroLarge } = painting;
+  const { name, heroSmall, heroLarge, gallery } = painting;
 
   return (
-    <figure>
+    <figure className="relative self-start">
       <picture>
         <source
           media="(min-width: 48rem)"
@@ -18,9 +19,10 @@ export default function PaintingFigure({ painting }: { painting: Painting }) {
           height={heroSmall.height}
           alt={name}
           fetchPriority="high"
-          className="w-full"
+          className="block w-full"
         />
       </picture>
+      <PaintingLightbox name={name} image={gallery} />
     </figure>
   );
 }

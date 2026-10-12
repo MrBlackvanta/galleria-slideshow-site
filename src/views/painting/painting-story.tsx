@@ -11,7 +11,7 @@ export default function PaintingStory({ painting }: { painting: Painting }) {
       >
         <span className="sr-only">Painted in {year}</span>
       </p>
-      <div className="wide:mx-0 wide:max-w-87.5 md:mx-auto md:max-w-114">
+      <div className="wide:mx-0 wide:max-w-87.5 relative md:mx-auto md:max-w-114">
         <p className="text-body text-muted">{description}</p>
         <a
           href={source}
