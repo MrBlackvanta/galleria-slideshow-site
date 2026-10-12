@@ -6,13 +6,16 @@ import PaintingFigure from "./painting-figure";
 const painting = paintings[0];
 
 describe("PaintingFigure", () => {
-  it("art-directs the hero rather than upscaling one crop", () => {
+  it("art-directs the hero and offers both densities", () => {
     const { container } = render(<PaintingFigure painting={painting} />);
 
     const source = container.querySelector("source");
 
     expect(source).toHaveAttribute("media", "(min-width: 48rem)");
-    expect(source).toHaveAttribute("srcset", painting.heroLarge.src);
+    expect(source).toHaveAttribute(
+      "srcset",
+      `${painting.heroLarge.src} 1x, ${painting.heroLarge2x.src} 2x`,
+    );
     expect(source).toHaveAttribute("width", String(painting.heroLarge.width));
     expect(source).toHaveAttribute("height", String(painting.heroLarge.height));
   });

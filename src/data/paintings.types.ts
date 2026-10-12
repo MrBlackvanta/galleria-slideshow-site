@@ -10,6 +10,7 @@ export type Painting = {
   thumbnail: StaticImageData;
   heroSmall: StaticImageData;
   heroLarge: StaticImageData;
+  heroLarge2x: StaticImageData;
   gallery: StaticImageData;
   portrait: StaticImageData;
 };

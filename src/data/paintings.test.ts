@@ -10,19 +10,27 @@ describe("paintings", () => {
     slugs.forEach((slug) => expect(slug).toMatch(/^[a-z]+(-[a-z]+)*$/));
   });
 
-  it("carries five images and a source for every painting", () => {
+  it("carries six images and a source for every painting", () => {
     paintings.forEach((painting) => {
       expect(painting.source).toMatch(/^https:\/\/en\.wikipedia\.org\//);
       [
         painting.thumbnail,
         painting.heroSmall,
         painting.heroLarge,
+        painting.heroLarge2x,
         painting.gallery,
         painting.portrait,
       ].forEach((image) => {
         expect(image.src).toContain(".webp");
         expect(image.width).toBeGreaterThan(1);
       });
+    });
+  });
+
+  it("pairs every desktop hero with a true 2x twin", () => {
+    paintings.forEach(({ heroLarge, heroLarge2x }) => {
+      expect(heroLarge2x.width).toBe(heroLarge.width * 2);
+      expect(heroLarge2x.height).toBe(heroLarge.height * 2);
     });
   });
 

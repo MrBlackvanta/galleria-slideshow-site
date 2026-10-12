@@ -1,75 +1,90 @@
 import arnolfiniPortraitGallery from "@/assets/paintings/arnolfini-portrait/gallery.webp";
 import arnolfiniPortraitHeroLarge from "@/assets/paintings/arnolfini-portrait/hero-large.webp";
+import arnolfiniPortraitHeroLarge2x from "@/assets/paintings/arnolfini-portrait/hero-large@2x.webp";
 import arnolfiniPortraitHeroSmall from "@/assets/paintings/arnolfini-portrait/hero-small.webp";
 import arnolfiniPortraitPortrait from "@/assets/paintings/arnolfini-portrait/artist.webp";
 import arnolfiniPortraitThumbnail from "@/assets/paintings/arnolfini-portrait/thumbnail.webp";
 import girlWithPearlEarringGallery from "@/assets/paintings/girl-with-pearl-earring/gallery.webp";
 import girlWithPearlEarringHeroLarge from "@/assets/paintings/girl-with-pearl-earring/hero-large.webp";
+import girlWithPearlEarringHeroLarge2x from "@/assets/paintings/girl-with-pearl-earring/hero-large@2x.webp";
 import girlWithPearlEarringHeroSmall from "@/assets/paintings/girl-with-pearl-earring/hero-small.webp";
 import girlWithPearlEarringPortrait from "@/assets/paintings/girl-with-pearl-earring/artist.webp";
 import girlWithPearlEarringThumbnail from "@/assets/paintings/girl-with-pearl-earring/thumbnail.webp";
 import guernicaGallery from "@/assets/paintings/guernica/gallery.webp";
 import guernicaHeroLarge from "@/assets/paintings/guernica/hero-large.webp";
+import guernicaHeroLarge2x from "@/assets/paintings/guernica/hero-large@2x.webp";
 import guernicaHeroSmall from "@/assets/paintings/guernica/hero-small.webp";
 import guernicaPortrait from "@/assets/paintings/guernica/artist.webp";
 import guernicaThumbnail from "@/assets/paintings/guernica/thumbnail.webp";
 import ladyWithAnErmineGallery from "@/assets/paintings/lady-with-an-ermine/gallery.webp";
 import ladyWithAnErmineHeroLarge from "@/assets/paintings/lady-with-an-ermine/hero-large.webp";
+import ladyWithAnErmineHeroLarge2x from "@/assets/paintings/lady-with-an-ermine/hero-large@2x.webp";
 import ladyWithAnErmineHeroSmall from "@/assets/paintings/lady-with-an-ermine/hero-small.webp";
 import ladyWithAnErminePortrait from "@/assets/paintings/lady-with-an-ermine/artist.webp";
 import ladyWithAnErmineThumbnail from "@/assets/paintings/lady-with-an-ermine/thumbnail.webp";
 import monaLisaGallery from "@/assets/paintings/mona-lisa/gallery.webp";
 import monaLisaHeroLarge from "@/assets/paintings/mona-lisa/hero-large.webp";
+import monaLisaHeroLarge2x from "@/assets/paintings/mona-lisa/hero-large@2x.webp";
 import monaLisaHeroSmall from "@/assets/paintings/mona-lisa/hero-small.webp";
 import monaLisaPortrait from "@/assets/paintings/mona-lisa/artist.webp";
 import monaLisaThumbnail from "@/assets/paintings/mona-lisa/thumbnail.webp";
 import penitentMagdaleneGallery from "@/assets/paintings/penitent-magdalene/gallery.webp";
 import penitentMagdaleneHeroLarge from "@/assets/paintings/penitent-magdalene/hero-large.webp";
+import penitentMagdaleneHeroLarge2x from "@/assets/paintings/penitent-magdalene/hero-large@2x.webp";
 import penitentMagdaleneHeroSmall from "@/assets/paintings/penitent-magdalene/hero-small.webp";
 import penitentMagdalenePortrait from "@/assets/paintings/penitent-magdalene/artist.webp";
 import penitentMagdaleneThumbnail from "@/assets/paintings/penitent-magdalene/thumbnail.webp";
 import starryNightGallery from "@/assets/paintings/starry-night/gallery.webp";
 import starryNightHeroLarge from "@/assets/paintings/starry-night/hero-large.webp";
+import starryNightHeroLarge2x from "@/assets/paintings/starry-night/hero-large@2x.webp";
 import starryNightHeroSmall from "@/assets/paintings/starry-night/hero-small.webp";
 import starryNightPortrait from "@/assets/paintings/starry-night/artist.webp";
 import starryNightThumbnail from "@/assets/paintings/starry-night/thumbnail.webp";
 import theBasketOfApplesGallery from "@/assets/paintings/the-basket-of-apples/gallery.webp";
 import theBasketOfApplesHeroLarge from "@/assets/paintings/the-basket-of-apples/hero-large.webp";
+import theBasketOfApplesHeroLarge2x from "@/assets/paintings/the-basket-of-apples/hero-large@2x.webp";
 import theBasketOfApplesHeroSmall from "@/assets/paintings/the-basket-of-apples/hero-small.webp";
 import theBasketOfApplesPortrait from "@/assets/paintings/the-basket-of-apples/artist.webp";
 import theBasketOfApplesThumbnail from "@/assets/paintings/the-basket-of-apples/thumbnail.webp";
 import theBoyInTheRedVestGallery from "@/assets/paintings/the-boy-in-the-red-vest/gallery.webp";
 import theBoyInTheRedVestHeroLarge from "@/assets/paintings/the-boy-in-the-red-vest/hero-large.webp";
+import theBoyInTheRedVestHeroLarge2x from "@/assets/paintings/the-boy-in-the-red-vest/hero-large@2x.webp";
 import theBoyInTheRedVestHeroSmall from "@/assets/paintings/the-boy-in-the-red-vest/hero-small.webp";
 import theBoyInTheRedVestPortrait from "@/assets/paintings/the-boy-in-the-red-vest/artist.webp";
 import theBoyInTheRedVestThumbnail from "@/assets/paintings/the-boy-in-the-red-vest/thumbnail.webp";
 import theGreatWaveOffKanagawaGallery from "@/assets/paintings/the-great-wave-off-kanagawa/gallery.webp";
 import theGreatWaveOffKanagawaHeroLarge from "@/assets/paintings/the-great-wave-off-kanagawa/hero-large.webp";
+import theGreatWaveOffKanagawaHeroLarge2x from "@/assets/paintings/the-great-wave-off-kanagawa/hero-large@2x.webp";
 import theGreatWaveOffKanagawaHeroSmall from "@/assets/paintings/the-great-wave-off-kanagawa/hero-small.webp";
 import theGreatWaveOffKanagawaPortrait from "@/assets/paintings/the-great-wave-off-kanagawa/artist.webp";
 import theGreatWaveOffKanagawaThumbnail from "@/assets/paintings/the-great-wave-off-kanagawa/thumbnail.webp";
 import theNightCafeGallery from "@/assets/paintings/the-night-cafe/gallery.webp";
 import theNightCafeHeroLarge from "@/assets/paintings/the-night-cafe/hero-large.webp";
+import theNightCafeHeroLarge2x from "@/assets/paintings/the-night-cafe/hero-large@2x.webp";
 import theNightCafeHeroSmall from "@/assets/paintings/the-night-cafe/hero-small.webp";
 import theNightCafePortrait from "@/assets/paintings/the-night-cafe/artist.webp";
 import theNightCafeThumbnail from "@/assets/paintings/the-night-cafe/thumbnail.webp";
 import theSleepingGypsyGallery from "@/assets/paintings/the-sleeping-gypsy/gallery.webp";
 import theSleepingGypsyHeroLarge from "@/assets/paintings/the-sleeping-gypsy/hero-large.webp";
+import theSleepingGypsyHeroLarge2x from "@/assets/paintings/the-sleeping-gypsy/hero-large@2x.webp";
 import theSleepingGypsyHeroSmall from "@/assets/paintings/the-sleeping-gypsy/hero-small.webp";
 import theSleepingGypsyPortrait from "@/assets/paintings/the-sleeping-gypsy/artist.webp";
 import theSleepingGypsyThumbnail from "@/assets/paintings/the-sleeping-gypsy/thumbnail.webp";
 import theStormOnTheSeaOfGalileeGallery from "@/assets/paintings/the-storm-on-the-sea-of-galilee/gallery.webp";
 import theStormOnTheSeaOfGalileeHeroLarge from "@/assets/paintings/the-storm-on-the-sea-of-galilee/hero-large.webp";
+import theStormOnTheSeaOfGalileeHeroLarge2x from "@/assets/paintings/the-storm-on-the-sea-of-galilee/hero-large@2x.webp";
 import theStormOnTheSeaOfGalileeHeroSmall from "@/assets/paintings/the-storm-on-the-sea-of-galilee/hero-small.webp";
 import theStormOnTheSeaOfGalileePortrait from "@/assets/paintings/the-storm-on-the-sea-of-galilee/artist.webp";
 import theStormOnTheSeaOfGalileeThumbnail from "@/assets/paintings/the-storm-on-the-sea-of-galilee/thumbnail.webp";
 import theSwingGallery from "@/assets/paintings/the-swing/gallery.webp";
 import theSwingHeroLarge from "@/assets/paintings/the-swing/hero-large.webp";
+import theSwingHeroLarge2x from "@/assets/paintings/the-swing/hero-large@2x.webp";
 import theSwingHeroSmall from "@/assets/paintings/the-swing/hero-small.webp";
 import theSwingPortrait from "@/assets/paintings/the-swing/artist.webp";
 import theSwingThumbnail from "@/assets/paintings/the-swing/thumbnail.webp";
 import vanGoghSelfPortraitGallery from "@/assets/paintings/van-gogh-self-portrait/gallery.webp";
 import vanGoghSelfPortraitHeroLarge from "@/assets/paintings/van-gogh-self-portrait/hero-large.webp";
+import vanGoghSelfPortraitHeroLarge2x from "@/assets/paintings/van-gogh-self-portrait/hero-large@2x.webp";
 import vanGoghSelfPortraitHeroSmall from "@/assets/paintings/van-gogh-self-portrait/hero-small.webp";
 import vanGoghSelfPortraitPortrait from "@/assets/paintings/van-gogh-self-portrait/artist.webp";
 import vanGoghSelfPortraitThumbnail from "@/assets/paintings/van-gogh-self-portrait/thumbnail.webp";
@@ -87,6 +102,7 @@ export const paintings: Painting[] = [
     thumbnail: starryNightThumbnail,
     heroSmall: starryNightHeroSmall,
     heroLarge: starryNightHeroLarge,
+    heroLarge2x: starryNightHeroLarge2x,
     gallery: starryNightGallery,
     portrait: starryNightPortrait,
   },
@@ -101,6 +117,7 @@ export const paintings: Painting[] = [
     thumbnail: girlWithPearlEarringThumbnail,
     heroSmall: girlWithPearlEarringHeroSmall,
     heroLarge: girlWithPearlEarringHeroLarge,
+    heroLarge2x: girlWithPearlEarringHeroLarge2x,
     gallery: girlWithPearlEarringGallery,
     portrait: girlWithPearlEarringPortrait,
   },
@@ -115,6 +132,7 @@ export const paintings: Painting[] = [
     thumbnail: guernicaThumbnail,
     heroSmall: guernicaHeroSmall,
     heroLarge: guernicaHeroLarge,
+    heroLarge2x: guernicaHeroLarge2x,
     gallery: guernicaGallery,
     portrait: guernicaPortrait,
   },
@@ -130,6 +148,7 @@ export const paintings: Painting[] = [
     thumbnail: penitentMagdaleneThumbnail,
     heroSmall: penitentMagdaleneHeroSmall,
     heroLarge: penitentMagdaleneHeroLarge,
+    heroLarge2x: penitentMagdaleneHeroLarge2x,
     gallery: penitentMagdaleneGallery,
     portrait: penitentMagdalenePortrait,
   },
@@ -144,6 +163,7 @@ export const paintings: Painting[] = [
     thumbnail: theStormOnTheSeaOfGalileeThumbnail,
     heroSmall: theStormOnTheSeaOfGalileeHeroSmall,
     heroLarge: theStormOnTheSeaOfGalileeHeroLarge,
+    heroLarge2x: theStormOnTheSeaOfGalileeHeroLarge2x,
     gallery: theStormOnTheSeaOfGalileeGallery,
     portrait: theStormOnTheSeaOfGalileePortrait,
   },
@@ -158,6 +178,7 @@ export const paintings: Painting[] = [
     thumbnail: theGreatWaveOffKanagawaThumbnail,
     heroSmall: theGreatWaveOffKanagawaHeroSmall,
     heroLarge: theGreatWaveOffKanagawaHeroLarge,
+    heroLarge2x: theGreatWaveOffKanagawaHeroLarge2x,
     gallery: theGreatWaveOffKanagawaGallery,
     portrait: theGreatWaveOffKanagawaPortrait,
   },
@@ -172,6 +193,7 @@ export const paintings: Painting[] = [
     thumbnail: vanGoghSelfPortraitThumbnail,
     heroSmall: vanGoghSelfPortraitHeroSmall,
     heroLarge: vanGoghSelfPortraitHeroLarge,
+    heroLarge2x: vanGoghSelfPortraitHeroLarge2x,
     gallery: vanGoghSelfPortraitGallery,
     portrait: vanGoghSelfPortraitPortrait,
   },
@@ -186,6 +208,7 @@ export const paintings: Painting[] = [
     thumbnail: theSleepingGypsyThumbnail,
     heroSmall: theSleepingGypsyHeroSmall,
     heroLarge: theSleepingGypsyHeroLarge,
+    heroLarge2x: theSleepingGypsyHeroLarge2x,
     gallery: theSleepingGypsyGallery,
     portrait: theSleepingGypsyPortrait,
   },
@@ -200,6 +223,7 @@ export const paintings: Painting[] = [
     thumbnail: ladyWithAnErmineThumbnail,
     heroSmall: ladyWithAnErmineHeroSmall,
     heroLarge: ladyWithAnErmineHeroLarge,
+    heroLarge2x: ladyWithAnErmineHeroLarge2x,
     gallery: ladyWithAnErmineGallery,
     portrait: ladyWithAnErminePortrait,
   },
@@ -214,6 +238,7 @@ export const paintings: Painting[] = [
     thumbnail: theNightCafeThumbnail,
     heroSmall: theNightCafeHeroSmall,
     heroLarge: theNightCafeHeroLarge,
+    heroLarge2x: theNightCafeHeroLarge2x,
     gallery: theNightCafeGallery,
     portrait: theNightCafePortrait,
   },
@@ -228,6 +253,7 @@ export const paintings: Painting[] = [
     thumbnail: theBasketOfApplesThumbnail,
     heroSmall: theBasketOfApplesHeroSmall,
     heroLarge: theBasketOfApplesHeroLarge,
+    heroLarge2x: theBasketOfApplesHeroLarge2x,
     gallery: theBasketOfApplesGallery,
     portrait: theBasketOfApplesPortrait,
   },
@@ -242,6 +268,7 @@ export const paintings: Painting[] = [
     thumbnail: theBoyInTheRedVestThumbnail,
     heroSmall: theBoyInTheRedVestHeroSmall,
     heroLarge: theBoyInTheRedVestHeroLarge,
+    heroLarge2x: theBoyInTheRedVestHeroLarge2x,
     gallery: theBoyInTheRedVestGallery,
     portrait: theBoyInTheRedVestPortrait,
   },
@@ -256,6 +283,7 @@ export const paintings: Painting[] = [
     thumbnail: arnolfiniPortraitThumbnail,
     heroSmall: arnolfiniPortraitHeroSmall,
     heroLarge: arnolfiniPortraitHeroLarge,
+    heroLarge2x: arnolfiniPortraitHeroLarge2x,
     gallery: arnolfiniPortraitGallery,
     portrait: arnolfiniPortraitPortrait,
   },
@@ -270,6 +298,7 @@ export const paintings: Painting[] = [
     thumbnail: monaLisaThumbnail,
     heroSmall: monaLisaHeroSmall,
     heroLarge: monaLisaHeroLarge,
+    heroLarge2x: monaLisaHeroLarge2x,
     gallery: monaLisaGallery,
     portrait: monaLisaPortrait,
   },
@@ -284,6 +313,7 @@ export const paintings: Painting[] = [
     thumbnail: theSwingThumbnail,
     heroSmall: theSwingHeroSmall,
     heroLarge: theSwingHeroLarge,
+    heroLarge2x: theSwingHeroLarge2x,
     gallery: theSwingGallery,
     portrait: theSwingPortrait,
   },
