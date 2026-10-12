@@ -42,7 +42,7 @@ export default function PaintingNav({ index }: { index: number }) {
   return (
     <nav
       aria-label="Collection"
-      className="before:bg-rule relative before:absolute before:inset-x-0 before:top-0 before:h-px"
+      className="before:bg-rule bg-page sticky bottom-0 z-20 before:absolute before:inset-x-0 before:top-0 before:h-px"
     >
       <div
         aria-hidden="true"
