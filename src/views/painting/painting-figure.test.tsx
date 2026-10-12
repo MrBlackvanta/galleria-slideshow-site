@@ -30,4 +30,37 @@ describe("PaintingFigure", () => {
     expect(image).toHaveAttribute("height", String(painting.heroSmall.height));
     expect(image).toHaveAttribute("fetchpriority", "high");
   });
+
+  it("preloads the crop the viewport will actually use", () => {
+    render(<PaintingFigure painting={painting} />);
+
+    const narrow = document.head.querySelector(
+      `link[rel="preload"][media="not all and (min-width: 48rem)"]`,
+    );
+    const wide = document.head.querySelector(
+      `link[rel="preload"][media="(min-width: 48rem)"]`,
+    );
+
+    expect(narrow).toHaveAttribute("href", painting.heroSmall.src);
+    expect(narrow).toHaveAttribute("as", "image");
+    expect(narrow).toHaveAttribute("fetchpriority", "high");
+    expect(wide).toHaveAttribute(
+      "imagesrcset",
+      `${painting.heroLarge.src} 1x, ${painting.heroLarge2x.src} 2x`,
+    );
+  });
+
+  it("preloads exactly what the source element resolves to", () => {
+    const { container } = render(<PaintingFigure painting={painting} />);
+
+    const source = container.querySelector("source");
+    const wide = document.head.querySelector(
+      `link[rel="preload"][as="image"][imagesrcset]`,
+    );
+
+    expect(wide?.getAttribute("imagesrcset")).toBe(
+      source?.getAttribute("srcset"),
+    );
+    expect(wide?.getAttribute("media")).toBe(source?.getAttribute("media"));
+  });
 });

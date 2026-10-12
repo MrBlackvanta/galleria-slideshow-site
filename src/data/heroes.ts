@@ -1,6 +1,7 @@
 import type { Painting } from "./paintings.types";
 
 export const HERO_MEDIA = "(min-width: 48rem)";
+export const BELOW_HERO_MEDIA = `not all and ${HERO_MEDIA}`;
 
 export type HeroSources = {
   small: string;
