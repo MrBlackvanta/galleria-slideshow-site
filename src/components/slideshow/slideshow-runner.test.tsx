@@ -10,10 +10,21 @@ const SLIDE_DURATION = 6000;
 
 let standing: RenderResult | null = null;
 
+const nextHero = {
+  small: "/hero-small.webp",
+  large: "/hero-large.webp",
+  large2x: "/hero-large@2x.webp",
+};
+
 function arrive(path: string, nextSlug?: string) {
   standing?.unmount();
   window.history.replaceState(null, "", path);
-  standing = render(<SlideshowRunner nextSlug={nextSlug} />);
+  standing = render(
+    <SlideshowRunner
+      nextSlug={nextSlug}
+      nextHero={nextSlug ? nextHero : undefined}
+    />,
+  );
 }
 
 function linger(duration = SLIDE_DURATION) {
@@ -63,6 +74,24 @@ describe("SlideshowRunner", () => {
     linger();
 
     expect(replace).toHaveBeenCalledWith("/guernica");
+  });
+
+  it("fetches the next painting while the current one is still on screen", () => {
+    const requested: string[] = [];
+
+    vi.stubGlobal(
+      "Image",
+      class {
+        set src(value: string) {
+          requested.push(value);
+        }
+      },
+    );
+
+    arrive("/the-swing?slideshow=true", "mona-lisa");
+
+    expect(requested).toEqual([nextHero.small]);
+    expect(replace).not.toHaveBeenCalled();
   });
 
   it("ends the slideshow at the last painting and does not wrap", () => {

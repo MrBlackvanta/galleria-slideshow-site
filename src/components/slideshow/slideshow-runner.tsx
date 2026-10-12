@@ -1,5 +1,8 @@
 "use client";
 
+import { advanceTo } from "@/components/effects/view-transition";
+import warmHero from "@/components/effects/warm-hero";
+import type { HeroSources } from "@/data";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import {
@@ -11,7 +14,15 @@ import {
 const SLIDE_DURATION = 6000;
 const HEARTBEAT = 250;
 
-export default function SlideshowRunner({ nextSlug }: { nextSlug?: string }) {
+type SlideshowRunnerProps = {
+  nextSlug?: string;
+  nextHero?: HeroSources;
+};
+
+export default function SlideshowRunner({
+  nextSlug,
+  nextHero,
+}: SlideshowRunnerProps) {
   const router = useRouter();
   const running = useSlideshowRunning();
 
@@ -21,6 +32,10 @@ export default function SlideshowRunner({ nextSlug }: { nextSlug?: string }) {
     startSlideshow();
     window.history.replaceState(null, "", window.location.pathname);
   }, []);
+
+  useEffect(() => {
+    if (running && nextHero) warmHero(nextHero);
+  }, [running, nextHero]);
 
   useEffect(() => {
     if (!running) return;
@@ -38,7 +53,9 @@ export default function SlideshowRunner({ nextSlug }: { nextSlug?: string }) {
         return;
       }
 
-      if (Date.now() >= deadline) router.replace(`/${nextSlug}`);
+      if (Date.now() >= deadline) {
+        advanceTo(() => router.replace(`/${nextSlug}`));
+      }
     }, HEARTBEAT);
 
     return () => clearInterval(timer);

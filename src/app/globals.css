@@ -140,6 +140,16 @@
   }
 }
 
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 220ms;
+}
+
+[data-advancing]::view-transition-old(root),
+[data-advancing]::view-transition-new(root) {
+  animation-duration: 700ms;
+}
+
 @layer base {
   :root {
     color-scheme: light;

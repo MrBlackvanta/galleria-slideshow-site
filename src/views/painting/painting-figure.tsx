@@ -1,4 +1,4 @@
-import type { Painting } from "@/data";
+import { HERO_MEDIA, type Painting } from "@/data";
 import PaintingLightbox from "./painting-lightbox";
 
 export default function PaintingFigure({ painting }: { painting: Painting }) {
@@ -8,7 +8,7 @@ export default function PaintingFigure({ painting }: { painting: Painting }) {
     <figure className="relative self-start">
       <picture>
         <source
-          media="(min-width: 48rem)"
+          media={HERO_MEDIA}
           srcSet={`${heroLarge.src} 1x, ${heroLarge2x.src} 2x`}
           width={heroLarge.width}
           height={heroLarge.height}

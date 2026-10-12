@@ -1,3 +1,4 @@
+import { RouteTransitions } from "@/components/effects";
 import { Signature } from "@/components/layout";
 import {
   openGraphBase,
@@ -41,6 +42,7 @@ export default function RootLayout({
       <body className="relative flex min-h-dvh flex-col">
         {children}
         <Signature />
+        <RouteTransitions />
       </body>
     </html>
   );

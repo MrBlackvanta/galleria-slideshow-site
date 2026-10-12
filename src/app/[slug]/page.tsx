@@ -1,6 +1,6 @@
 import { SiteHeader } from "@/components/layout";
 import { SlideshowRunner, SlideshowToggle } from "@/components/slideshow";
-import { openGraphBase, paintings } from "@/data";
+import { heroSources, openGraphBase, paintings } from "@/data";
 import {
   PaintingFigure,
   PaintingNav,
@@ -49,6 +49,7 @@ export default async function PaintingPage({ params }: PaintingPageProps) {
   if (index < 0) notFound();
 
   const painting = paintings[index];
+  const next = paintings[index + 1];
 
   return (
     <>
@@ -63,7 +64,10 @@ export default async function PaintingPage({ params }: PaintingPageProps) {
         </article>
       </main>
       <PaintingNav index={index} />
-      <SlideshowRunner nextSlug={paintings[index + 1]?.slug} />
+      <SlideshowRunner
+        nextSlug={next?.slug}
+        nextHero={next && heroSources(next)}
+      />
     </>
   );
 }
