@@ -1,4 +1,5 @@
 import { SiteHeader } from "@/components/layout";
+import { SlideshowRunner } from "@/components/slideshow";
 import { openGraphBase, paintings } from "@/data";
 import {
   PaintingFigure,
@@ -68,6 +69,7 @@ export default async function PaintingPage({ params }: PaintingPageProps) {
         </article>
       </main>
       <PaintingNav index={index} />
+      <SlideshowRunner nextSlug={paintings[index + 1]?.slug} />
     </>
   );
 }

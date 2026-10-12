@@ -1,4 +1,5 @@
 import { SiteHeader } from "@/components/layout";
+import { SlideshowExit } from "@/components/slideshow";
 import { paintings } from "@/data";
 import { PaintingGrid } from "@/views/home";
 import type { Metadata } from "next";
@@ -21,6 +22,7 @@ export default function Home() {
         <h1 className="sr-only">galleria</h1>
         <PaintingGrid />
       </main>
+      <SlideshowExit />
     </>
   );
 }
