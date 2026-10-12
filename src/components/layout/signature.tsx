@@ -6,7 +6,7 @@ export default function Signature() {
         href="https://www.linkedin.com/in/abdelrhman-vanta/"
         target="_blank"
         rel="noopener noreferrer"
-        className="underline underline-offset-2"
+        className="hover:text-ink underline underline-offset-2 transition-colors"
       >
         Abdelrhman Abdelaal
       </a>

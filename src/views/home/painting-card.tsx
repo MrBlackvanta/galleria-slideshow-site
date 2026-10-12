@@ -28,7 +28,7 @@ export default function PaintingCard({
     <li className="v-masonry md:self-start" style={placement}>
       <Link
         href={`/${slug}`}
-        className="before:bg-ink/0 hover:before:bg-ink/20 focus-visible:before:bg-ink/20 relative block overflow-hidden before:absolute before:inset-0 before:transition-colors"
+        className="group/card before:bg-ink/0 hover:before:bg-ink/20 focus-visible:before:bg-ink/20 relative isolate block overflow-hidden before:absolute before:inset-0 before:z-10 before:transition-colors"
       >
         <img
           src={thumbnail.src}
@@ -38,9 +38,9 @@ export default function PaintingCard({
           alt=""
           loading={priority ? "eager" : "lazy"}
           fetchPriority={priority ? "high" : undefined}
-          className="w-full object-cover"
+          className="w-full object-cover transition-transform duration-500 ease-out motion-safe:group-hover/card:scale-105 motion-safe:group-focus-visible/card:scale-105"
         />
-        <div className="v-caption absolute inset-x-0 bottom-0 flex flex-col justify-end px-8 pb-8">
+        <div className="v-caption absolute inset-x-0 bottom-0 z-20 flex flex-col justify-end px-8 pb-8">
           <h2 className="text-h2 text-page">{name}</h2>
           <p className="text-caption-md text-page/75 mt-1.5">{artist}</p>
         </div>
